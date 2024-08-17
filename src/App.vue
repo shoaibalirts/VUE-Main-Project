@@ -1,16 +1,27 @@
 <template>
-  <header>
-    <ul>
-      <li>
-        <router-link to="/coaches">Coaches</router-link>
-      </li>
-      <li>
-        <router-link to="/requests">Requests</router-link>
-      </li>
-    </ul>
-  </header>
-  <main>
+    <the-header></the-header>
     <router-view></router-view>
-  </main>
 </template>
-<script></script>
+<script>
+import TheHeader from './components/layout/TheHeader.vue';
+export default {
+  components: {
+    TheHeader,
+  },
+};
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>
